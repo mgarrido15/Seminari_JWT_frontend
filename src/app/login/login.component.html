@@ -19,6 +19,12 @@
                 <div class="text-danger" *ngIf="hasError('password','required')">Contraseña requerida.</div>
                 <div class="text-danger" *ngIf="hasError('password','minlength')">Contraseña inválida, tiene menos de 8 carácteres.</div>
             </div>
+            <div class="mb-3">
+                <label for="exampleInputName1" class="form-label">Name:  </label>
+                <input [ngClass]="{'is-invalid': hasError('name','required')}"
+                type="name" class="form-control" id="name" formControlName="name">
+                <div class="text-danger" *ngIf="hasError('password','required')">Nombre requerido.</div>
+            </div>
             <button type="submit" class="btn btn-primary">Login</button>
             <button (click)="loginWithGoogle()">Iniciar sesión con Google</button>
             <p>{{Prova | uppercase}}</p>

@@ -71,6 +71,8 @@ export class LoginComponent implements OnInit {
       next: (response) => {
         console.log('Login exitoso:', response);
         localStorage.setItem('access_token', response.token);
+        localStorage.setItem('refresh_token', response.refreshToken);
+        console.log('Token guardado:', response.refreshToken);
         this.exportLoggedIn.emit(true);
       },
       error: (error) => {
