@@ -50,8 +50,9 @@ export class LoginComponent implements OnInit {
       
     });
     this.formularioLogin = this.form.group({
-      email: ['joan1234@example.com', [Validators.required, Validators.email]], // Valor predeterminado para el email
-      password: ['12345678', [Validators.required, Validators.minLength(8)]] // Valor predeterminado para la contraseña
+      email: ['usuario@example.com', [Validators.required, Validators.email]], // Valor predeterminado para el email
+      password: ['contraseña123', [Validators.required, Validators.minLength(8)]], // Valor predeterminado para la contraseña
+      name: ['Usuario Ejemplo', [Validators.required]] // Valor predeterminado para el nombre
     });
   };
 
